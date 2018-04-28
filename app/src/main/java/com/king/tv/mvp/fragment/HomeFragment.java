@@ -59,9 +59,7 @@ public class HomeFragment extends BaseFragment<ICategoryView, CategoryPresenter>
 
 
     public static HomeFragment newInstance() {
-        
         Bundle args = new Bundle();
-
         HomeFragment fragment = new HomeFragment();
         fragment.setArguments(args);
         return fragment;
