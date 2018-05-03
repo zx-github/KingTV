@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.RadioButton;
 
+import com.king.base.util.LogUtils;
 import com.king.base.util.ToastUtils;
 import com.king.tv.mvp.base.PureActivity;
 import com.king.tv.mvp.fragment.FollowFragment;
@@ -49,6 +50,7 @@ public class MainActivity extends PureActivity {
         super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);
+        rbHome.setChecked(true);
     }
 
     @Override
@@ -74,6 +76,10 @@ public class MainActivity extends PureActivity {
         showHomeFragment();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     @Override
     public void onBackPressed() {
