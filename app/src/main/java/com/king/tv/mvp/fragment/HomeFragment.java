@@ -58,6 +58,8 @@ public class HomeFragment extends BaseFragment<ICategoryView, CategoryPresenter>
     private List<Fragment> listData;
 
 
+    /**给Fragment添加newInstance方法，将需要的参数传入，设置到bundle中，然后setArguments(bundle)，
+     * 最后在onCreate中进行获取；这样就完成了Fragment和Activity间的解耦*/
     public static HomeFragment newInstance() {
         Bundle args = new Bundle();
         HomeFragment fragment = new HomeFragment();
